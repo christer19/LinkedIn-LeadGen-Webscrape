@@ -1,6 +1,7 @@
 # Lead Generation from LinkedIn Webscraping
 
-Webscraping LinkedIn profiles of movers (who have recently changed jobs within the last 90 days) in LinkedIn Sales Navigator for marketing lead generation.
+Webscraping LinkedIn profiles in LinkedIn Sales Navigator for B2B marketing lead generation.
+My target is movers (contacts who have recently changed jobs within the last 90 days) in the HR department.
 
 Utilising the access to thousands of contacts on the Sales Navigator feature of LinkedIn, I have created a webscraper built with Python and Selenium. 
 With an automated browser, it will log into my account, loop through the selected industries that it is instructed to scrape, and go through each page of the result pages. Contacts data cannot be scraped unless the profile is scrolled within the viewported and displayed in the browser of end user (i.e. myself) - to tackle this, the webscraper uses an automated scrolling feature by emulating human browsing behaviour, including random sleep time. 
