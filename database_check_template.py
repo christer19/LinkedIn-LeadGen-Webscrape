@@ -13,8 +13,8 @@ def name_clean(x):
     x = ' '.join(x)
     return x
 
-leads_df['LinkedIn Name'] = leads_df['LinkedIn Name'].apply(name_clean)
-leads_df[['First Name', 'Last Name']] = leads_df['LinkedIn Name'].str.split(' ', expand = True)
+leads_df['Cleaned Name'] = leads_df['LinkedIn Name'].apply(name_clean)
+leads_df[['First Name', 'Last Name']] = leads_df['Cleaned Name'].str.split(' ', expand = True)
 leads_df[['Title', 'Company']] = leads_df['Title_Company'].str.split(' at ', expand = True).drop(columns=2)
 leads_df.drop('Title_Company', axis = 1, inplace=True)
 leads_df = leads_df[['First Name', 'Last Name', 'LinkedIn Name', 'Title', 'Company', 'Industry', 'Location']]

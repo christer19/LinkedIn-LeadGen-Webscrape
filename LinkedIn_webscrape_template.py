@@ -162,10 +162,10 @@ finally:
 extract = []
 
 for line in contacts:
-    for x in range(0, len(line)-1):
-for line in contacts:
-    exclude = ['Premium Member Badge', 'Viewed', 'is online', 'was last active']
-    line = [x for x in line if x not in exclude]
+    exclude = ['Premium Member Badge', 'Viewed']
+    exclude2 = 'is online' 
+    exclude3 = 'was last active'
+    line = [x for x in line if x not in exclude and exclude2 not in x and exclude3 not in x]
     extract.extend([[line[0], line[1], line[-1], line[-2]]])
 
 
