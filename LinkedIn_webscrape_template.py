@@ -125,7 +125,10 @@ try:
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.3);")
             time.sleep(np.random.uniform(0.5, 1))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.45);")
-            time.sleep(np.random.uniform(0.5, 1))
+            if current_page%5 == 0:
+                time.sleep(np.random.randint(3, 6))
+            else:
+                time.sleep(np.random.uniform(0.5, 1))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.6);")
             time.sleep(np.random.uniform(1.5, 2))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.75);")
@@ -146,7 +149,7 @@ try:
             if current_page%3 == 0 or current_page == lastpage+1:
                 time.sleep(np.random.randint(5, 10))
             elif total_pages%10 == 0:
-                time.sleep(np.random.randint(10, 15))
+                time.sleep(np.random.randint(20, 30))
 
             current_page += 1
             total_pages += 1
