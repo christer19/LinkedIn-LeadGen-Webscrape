@@ -181,6 +181,7 @@ for eachfilename, eachlist in data_tobe_exported.items():
         
         if eachfilename == 'new_leads.csv':
             writer.writerow(['Full Name', 'First', 'Last', 'Company', 'Email', 'Company Email Sample', 'Title', 'Industry', 'Location', 'Lead Source', 'Lead Status'])
+
         elif eachfilename == 'existing_leads.csv':
             writer.writerow(['Record ID', 'Full Name', 'First', 'Last', 'Up-to-date?', 'Old Company in CRM', 'Updated Company LinkedIn', 'Email', 'Company Email Sample', 'Title', 'Industry', 'Location', 'Lead Source', 'Lead Status'])
 

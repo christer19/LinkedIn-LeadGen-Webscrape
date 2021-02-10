@@ -106,7 +106,7 @@ try:
         print('industry:', industry)
         print('total pages:', lastpage)
 
-        while current_page < lastpage+1:
+        while current_page <= lastpage:
 
             url2 = var_URL(industry_code, current_page)
             driver.get(url2)
