@@ -121,12 +121,15 @@ try:
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.1);")
             time.sleep(np.random.uniform(0.5, 1))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.2);")
-            time.sleep(np.random.uniform(0.7, 1.5))
+            if current_page%8 == 0:
+                time.sleep(np.random.randint(3, 6))
+            else:
+                time.sleep(np.random.uniform(0.5, 1))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.3);")
             time.sleep(np.random.uniform(0.5, 1))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.45);")
             if current_page%5 == 0:
-                time.sleep(np.random.randint(3, 6))
+                time.sleep(np.random.randint(30, 90))
             else:
                 time.sleep(np.random.uniform(0.5, 1))
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight*0.6);")
@@ -147,9 +150,9 @@ try:
                 contacts.append(info)
 
             if current_page%3 == 0 or current_page == lastpage+1:
-                time.sleep(np.random.randint(5, 10))
+                time.sleep(np.random.randint(10, 20))
             elif total_pages%10 == 0:
-                time.sleep(np.random.randint(20, 30))
+                time.sleep(np.random.randint(90, 120))
 
             current_page += 1
             total_pages += 1
